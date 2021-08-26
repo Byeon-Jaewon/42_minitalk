@@ -2,6 +2,9 @@
 
 *UNIX signal을 사용해 IPC 구현...*
 
+SIGUSR1 : 10 at windows , 30 at macOS
+SIGUSR2 : 12 at windows , 31 at macos
+
 - write
 <pre> ssize_t wirte(int fd, const void *buf, size_t nbyte);</pre>
 > fd : 데이터 전송영역을 나타내는 파일 디스크립터   
