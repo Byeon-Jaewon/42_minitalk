@@ -6,14 +6,11 @@
 /*   By: jbyeon <jbyeon@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 15:07:24 by jbyeon            #+#    #+#             */
-/*   Updated: 2021/08/26 13:05:52 by jbyeon           ###   ########.fr       */
+/*   Updated: 2021/08/26 18:14:13 by jbyeon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <signal.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "client.h"
 
 void ft_send_char(int pid, char ch)
 {
@@ -39,7 +36,7 @@ int main(int argc, char **argv)
     if (argc == 3)
     {
         i = 0;
-        pid = atoi(argv[1]);
+        pid = ft_atoi(argv[1]);
         while (argv[2][i])
         {
             ft_send_char(pid, argv[2][i]);
